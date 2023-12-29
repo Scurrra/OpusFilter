@@ -18,7 +18,7 @@ versions from 3.7 to 3.11.
 
 * beautifulsoup4
 * opus-fast-mosestokenizer
-* fasttext
+* fasttext-wheel
 * graphviz
 * langid
 * matplotlib
