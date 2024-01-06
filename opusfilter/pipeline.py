@@ -27,7 +27,7 @@ class FilterPipeline:
         pipeline = cls()
         for filt in config:
             name, filter_cls = import_class(filt, [filtermodule])
-            attributes = filt[name]
+            attributes = filt[name] if isinstance(filt[name], dict) else dict()
             if workdir:
                 attributes['workdir'] = workdir
             pipeline.filters.append(filter_cls(**attributes))
